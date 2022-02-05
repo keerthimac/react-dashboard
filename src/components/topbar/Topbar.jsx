@@ -13,7 +13,7 @@ function Topbar() {
           <span className="logo">React Admin</span>
         </div>
         <div className="topRight">
-          <div className="topbarIconsContainer">
+          <div className="topbarIconsContainer"> 
             <IoNotificationsOutline style={style} />
             <span className="topIconBadge">2</span>
           </div>
@@ -25,6 +25,7 @@ function Topbar() {
             <IoSettingsSharp style={style} />
             <span className="topIconBadge">2</span>
           </div>
+          <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="avatar" />
         </div>
       </div>
     </div>
