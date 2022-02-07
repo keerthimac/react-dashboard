@@ -4,9 +4,23 @@ import { DataGrid } from "@mui/x-data-grid";
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import { userRows } from "../../dummyData.js";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function UserList() {
-  const [rows, setRows] = useState(userRows);
+  const [data, setData] = useState(userRows);
+
+  const handleDelete = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
+  // const handleDelete = React.useCallback(
+  //   (id) => () => {
+  //     setTimeout(() => {
+  //       setData((prevRows) => prevRows.filter((row) => row.id !== id));
+  //     });
+  //   },
+  //   []
+  // );
 
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
@@ -41,8 +55,13 @@ function UserList() {
       renderCell: (params) => {
         return (
           <>
-            <button className='userListEdit'>Edit</button>
-            <DeleteOutlineIcon />
+            <Link to={`/user/${params.row.id}`}>
+              <button className='userListEdit'>Edit</button>
+            </Link>
+            <DeleteOutlineIcon
+              className='userListDelete'
+              onClick={() => handleDelete(params.row.id)}
+            />
           </>
         );
       },
@@ -52,12 +71,12 @@ function UserList() {
   return (
     <div className='userList'>
       User List
-      <div style={{ height: 400, width: "100%" }}>
+      <div style={{ height: 700, width: "100%" }}>
         <DataGrid
-          rows={rows}
+          rows={data}
+          disableSelectionOnClick
           columns={columns}
-          pageSize={5}
-          rowsPerPageOptions={[5]}
+          pageSize={10}
           checkboxSelection
         />
       </div>
