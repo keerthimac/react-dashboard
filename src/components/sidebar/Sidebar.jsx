@@ -13,6 +13,8 @@ import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
 import Timeline from "@material-ui/icons/Timeline";
 import Report from "@material-ui/icons/Report";
 
+import { Link } from "react-router-dom";
+
 function Sidebar() {
   return (
     <div className='sidebar'>
@@ -23,7 +25,7 @@ function Sidebar() {
           <ul className='sidebarList'>
             <li className='sidebarListItem'>
               <LineStyleIcon className='sidebarIcon' />
-              Home
+              <Link to='/'>Home</Link>
             </li>
             <li className='sidebarListItem'>
               <TimelineIcon className='sidebarIcon' />
@@ -41,7 +43,7 @@ function Sidebar() {
           <ul className='sidebarList'>
             <li className='sidebarListItem'>
               <PermIdentity className='sidebarIcon' />
-              Users
+              <Link to='/users'>Users</Link>
             </li>
             <li className='sidebarListItem'>
               <Storefront className='sidebarIcon' />
