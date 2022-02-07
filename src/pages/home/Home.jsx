@@ -1,5 +1,5 @@
 import "./home.css";
-import userData from "../../dummyData";
+import {userData} from "../../dummyData";
 
 import FeaturedInfo from "../../components/featureInfo/FeaturedInfo";
 import Chart from "../../components/chart/Chart";
