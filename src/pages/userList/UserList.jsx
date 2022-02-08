@@ -1,6 +1,5 @@
-import * as React from "react";
 import "./userList.css";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid } from "@material-ui/data-grid";
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import { userRows } from "../../dummyData.js";
 import { useState } from "react";
@@ -76,7 +75,7 @@ function UserList() {
           rows={data}
           disableSelectionOnClick
           columns={columns}
-          pageSize={10}
+          pageSize={8}
           checkboxSelection
         />
       </div>
