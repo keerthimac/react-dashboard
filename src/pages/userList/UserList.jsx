@@ -69,7 +69,6 @@ function UserList() {
 
   return (
     <div className='userList'>
-      User List
       <div style={{ height: 700, width: "100%" }}>
         <DataGrid
           rows={data}
