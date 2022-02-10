@@ -5,6 +5,7 @@ import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import LocationSearchingIcon from "@material-ui/icons/LocationSearching";
+import PublishIcon from "@material-ui/icons/Publish";
 
 function User() {
   return (
@@ -59,39 +60,60 @@ function User() {
           <form className='userUpdateFrom'>
             <div className='userUpdateLeft'>
               <div className='userUpdateItem'>
-                <label>User Name</label>
+                <label>Username</label>
                 <input
                   type='text'
-                  placeholder='keerthi.mac'
+                  placeholder='annabeck99'
                   className='userUpdateInput'
                 />
+              </div>
+              <div className='userUpdateItem'>
                 <label>Full Name</label>
                 <input
                   type='text'
-                  placeholder='Darshana Keerthirathna'
+                  placeholder='Anna Becker'
                   className='userUpdateInput'
                 />
+              </div>
+              <div className='userUpdateItem'>
                 <label>Email</label>
                 <input
                   type='text'
-                  placeholder='keerthi.mac@gmail.com'
+                  placeholder='annabeck99@gmail.com'
                   className='userUpdateInput'
                 />
+              </div>
+              <div className='userUpdateItem'>
                 <label>Phone</label>
                 <input
                   type='text'
-                  placeholder='+94 71 6521 436'
+                  placeholder='+1 123 456 67'
                   className='userUpdateInput'
                 />
+              </div>
+              <div className='userUpdateItem'>
                 <label>Address</label>
                 <input
                   type='text'
-                  placeholder='Sri Lanka | Kandy'
+                  placeholder='New York | USA'
                   className='userUpdateInput'
                 />
               </div>
             </div>
-            <div className='userUpdateRight'></div>
+            <div className='userUpdateRight'>
+              <div className='userUpdateUpload'>
+                <img
+                  className='userUpdateImg'
+                  src='https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
+                  alt=''
+                />
+                <label htmlFor='file'>
+                  <PublishIcon className='userUpdateIcon' />
+                </label>
+                <input type='file' id='file' style={{ display: "none" }} />
+              </div>
+              <button className='userUpdateButton'>Update</button>
+            </div>
           </form>
         </div>
       </div>
